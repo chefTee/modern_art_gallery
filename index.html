@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./font/css/all.css">
     <title>Art Gallery Website-Taiwo Sharon</title>
 </head>
 <body>
@@ -11,6 +12,8 @@
         <div class="header-content-container">
             <div class="header-image">
                 <picture>
+                    <source media="(max-width:550px)" srcset="./assets/mobile_images/image-hero@2x.jpg">
+                    <source media="(max-width:815px)" srcset="./assets/tablet_images/image-hero.jpg">
                     <img src="./assets/desktop_images/image-hero.jpg" alt="">
                  </picture>
             </div>
@@ -18,11 +21,10 @@
                 <h1>MODERN <br>ART GALLERY</h1>
                 <div class="summaryandlocation">
                     <p class="location">The arts in the collection of the <span>Modern Art Gallery</span> all started from a spark of inspiration. Will these pieces inspire you? <span>Visit us and find out.</span></p>
-                        <div class="location-btn">
-                            <p><a href="#">OUR LOCATION</a></p>
-                            <div class="arrow-btn">
-                                <svg width="10" height="24" xmlns="http://www.w3.org/2000/svg"><path stroke="#FFF" fill="none" d="M9 24 1 12 9 0"/></svg>
-                            </div>
+                    <div class="location-btn-container-1">
+                        <a class="location-btn-1" href="./location.html">OUR LOCATION</a>
+                        <a class="arrow-btn-r" href="./location.html"><img src="./assets/icon-arrow-right.svg" alt=""></a>
+                    </div>
                         </div>
                 </div>
             </div>
@@ -37,14 +39,25 @@
             </p>
         </div>
         <div class="content two">
-            <img src="./assets/desktop_images/image-grid-1@2x.jpg" alt="">
+            <picture>
+                <source media="(max-width:550px)" srcset="./assets/mobile_images/image-grid-1@2x.jpg">
+                <source media="(max-width:815px)" srcset="./assets/tablet_images/image-grid-1@2x.jpg">
+                <img src="./assets/desktop_images/image-grid-1@2x.jpg" alt="">
+            </picture>
         </div>
         <div class="content three">
-            <img src="./assets/desktop_images/image-grid-2@2x.jpg" alt="">
+            <picture>
+                <source media="(max-width: 550px)" srcset="./assets/mobile_images/image-grid-2@2x.jpg">
+                <source media="(max-width:815px)" srcset="./assets/tablet_images/image-grid-2@2x.jpg">
+                <img src="./assets/desktop_images/image-grid-2@2x.jpg" alt="">
+            </picture>
         </div>
         <div class="content four">
-            <img src="./assets/desktop_images/image-grid-3@2x.jpg" alt="">
-
+            <picture>
+                <source media="(max-width:550px)" srcset="./assets/mobile_images/image-grid-3@2x.jpg">
+                <source media="(max-width:815px)" srcset="./assets/tablet_images/image-grid-3@2x (1).jpg">
+                <img src="./assets/desktop_images/image-grid-3@2x.jpg" alt="">
+            </picture>
         </div>
         <div class="content card two">
             <h2>COME & BE INSPIRED</h2>
@@ -55,15 +68,22 @@
     </div>
 
     <footer>
-        <h1>MODERN ART GALLERY</h1>
-        <P>The Modern Art Gallery is free to all visitores and pen seven
-            days a week from 8am to 9pm.Find us at 99 King Street, Newport, USA.
-        </P>
-        <ul>
-            <li><img src="./assets/icon-twitter (1).svg" alt=""></li>
-            <li><img src="./assets/icon-facebook (1).svg" alt=""></li>
-            <li><img src="./assets/icon-twitter (1).svg" alt=""></li>
-        </ul>
+        <div class="footer logo">
+            <img src="./assets/logo-light.svg" alt="">
+        </div>
+        <div class="footer summary">
+            <P>The Modern Art Gallery is free to all visitores and pen seven
+                days a week from 8am to 9pm.Find us at 99 King Street, Newport, USA.
+            </P>
+        </div>
+        <div class="footer socials">
+            <ul>
+                <li><i class="fa-brands fa-twitter"></i></li>
+                <li><i class="fa-brands fa-instagram"></i></li>
+                <li><i class="fa-brands fa-facebook-f"></i></li>
+            </ul>
+        </div>
+
     </footer> 
 </body>
 </html>

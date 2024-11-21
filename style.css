@@ -14,9 +14,6 @@ source{
     object-fit: cover;
     line-height: 0;
 }
-button{
-    font: inherit;
-}
 body{
     background-color: #fff;
     font-family: 'Big Shoulders Display', sans-serif;
@@ -43,7 +40,7 @@ header{
     position: absolute;
     left: 30%;
     animation: slideUp ease 1.5s;
-    transition:  ease-out 1s;
+    transition:  ease-out 1.2s;
     animation-delay: 200ms;
 }
 @keyframes slideUp{
@@ -60,8 +57,8 @@ header{
     display: flex;
     left: 0%;
     justify-content: space-between;
-    animation: slideDown ease 1.5s;
-    transition: all ease-out 1s;
+    animation: slideDown ease 0.5s;
+    transition: all ease-out 1.5s;
     animation-delay: 200ms;
 }
 @keyframes slideDown{
@@ -95,28 +92,44 @@ header{
     color: var(--black);
     font-weight: 700;
 }
-.header-content .summaryandlocation .location-btn{
-    font-family: 'Big Shoulders Display', sans-serif;
-    margin-top: 2rem;
-    width: fit-content;
+.location-btn-container-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--black);
+    top: 0;
+    position: relative;
+    left: 0%;
+    max-width: 90%;
+    width: max-content;
+    margin-top: 10%;
+}
+.location-btn-container-1:hover{
+    background-color: var(--brown);
+    transition: all ease 0.3s;
+}
+.location-btn-1{
+    width: max-content;
+    padding: 1.5rem;
+    font: 700 1.5rem 'Big Shoulders Display', sans-serif;
+    letter-spacing: 4px;
+    color: var(--white);
+    transition: all ease 0.3s;
+}
+.location-btn-1:hover~.arrow-btn-r{
+    background-color: var(--black);
+}
+.arrow-btn-r{
+    padding: 1.5rem;
+    background-color: var(--brown);
+    transition: all ease 0.3s;
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: 100%;
 }
-.location-btn p{
-    color: var(--white);
+.arrow-btn-r:hover{
     background-color: var(--black);
-    padding: 1rem;
-}
-.location-btn p a{
-    letter-spacing: 5px;
-    font-weight: 700;
-    color: var(--white);
-}
-.location-btn .arrow-btn{
-    background-color: var(--brown);
-    padding: 1rem;
+    transition: all ease 0.3s;
 }
 .gallery-container{
     padding: 10rem 5rem;
@@ -195,5 +208,330 @@ header{
     color: var(--gray);
 }
 
+footer{
+    width: 100%;
+    background-color: var(--black);
+    display: flex;
+    align-items: start;
+    color: var(--white);
+    padding: 2rem 5rem;
+    gap: 1rem;
+    justify-content: space-between;
+}
+.footer.logo{
+    width: 20%;
+}
+.footer.logo img{
+    width: max-content;
+}
+.footer.summary{
+    width: 40%;
+}
+.footer.summary p{
+    width: 100%;
+    margin: auto;
+    font-family: sans-serif;
+    font-size: 1rem;
+    color: var(--white);
+    line-height: 1.5rem;
+    font-weight: light;
 
-    
+}
+.footer.socials{
+    width: 20%;
+}
+.footer.socials ul{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1rem;
+    color: var(--black);
+}
+.footer.socials ul li i{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--white);
+    padding: 5px;
+    border-radius: 50%;
+
+}
+.footer.socials ul li i:hover{
+    background-color: var(--brown);
+    transition: all ease-in-out 0.3s;
+}
+/* Media Queries*/
+@media (max-width: 1250px){
+    .gallery-container .card h2{
+        font-size: 3rem;
+    }
+    .location-btn-1{
+        padding: 1.5rem 1rem;
+        font-size: 1.2rem;
+        letter-spacing: 3px;
+    }
+}
+@media (max-width: 1100px){
+    .gallery-container .card h2{
+        font-size: 2rem;
+    }
+    .location-btn-1{
+        padding: 1.5rem 0.6rem;
+    }
+}
+@media (max-width: 990px){
+    .header-content-container{
+        padding: 0 3rem;
+    }
+    .header-content h1{
+        width: fit-content;
+        line-height: 5rem;
+        font-size: 5rem;
+    }
+    .header-content .summaryandlocation{
+        width: 35%;
+        right: 0;
+        line-height: 2rem;
+    }
+    .gallery-container .card{
+        padding: 12px;
+    }
+    .gallery-container .card h2{
+        font-size: 3rem;
+    }
+    .gallery-container .card p{
+        font-size: 16px;
+        line-height: 1.7rem;
+    }
+    footer{
+        padding: 2rem 3rem;
+    }
+    .footer{
+        width: 100%;
+    }
+    .footer.logo img{
+        width: 60%;
+    }
+    .footer.summary p{
+        font-size: 12px;
+    }
+}
+@media (max-width: 875px){
+    .gallery-container .card h2{
+        font-size: 1.7rem;
+    }
+    .gallery-container .card p{
+        font-size: 14px;
+    }
+}
+    /*TABLET SCREENS */
+
+@media (max-width: 815px){
+    .header-content-container{
+        width: 100vw;
+        background-image: linear-gradient(var(--white));
+    }
+    .header-content-container img{
+        left: 0%;
+    }
+    .header-content{
+        padding-left: 10%;
+        max-width: 50%;
+        width: max-content;
+        padding-top: 6rem;
+        left: 40%;
+        display: flex;
+        flex-direction: column;
+    }
+    .header-content h1{
+        width: max-content;
+        position: relative;
+        left: 0;
+        font-size: 3em;
+        margin-bottom: 1rem;
+        color: var(--black);
+        mix-blend-mode: normal;
+        line-height: 4rem;
+    }
+    .header-content .summaryandlocation{
+        width: 100%;
+        position: relative;
+        right: 0;
+        font-size: 1em;
+        line-height: 2rem;
+    }
+    .location-btn-container-1{
+        display: flex;
+        align-items: stretch;
+    }
+    .location-btn-1{
+        font-size: .8rem;
+        letter-spacing: 3px;
+    }
+    .arrow-btn-r img {
+        width: auto;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .gallery-container .card{
+        padding: 15%;
+    }
+    .gallery-container .card h2{
+        font-size: 3em;
+    }
+    .gallery-container .card p{
+        font-size: 18px;
+        line-height: 1.8rem;
+        font-size: 900;
+    }
+    .gallery-container{
+        padding: 10rem 2rem;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr ; 
+        grid-template-areas: 
+        "one two two"
+        "three three four"
+        "three three five";
+    }
+    .content picture,
+    .content img {
+        width: auto;
+        height: 100%;
+    }
+    footer{
+        padding: 2rem;
+        justify-content: space-between;
+    }
+    .footer{
+        width: 100%;
+    }
+    .footer.logo img{
+        width: max-content;
+    }
+    .footer.summary p{
+        width: 100%;
+        margin: 0 auto;
+        font-size: 15px;
+    }
+    .footer.socials ul{
+        gap: .5rem;
+    }
+
+}
+@media (max-width: 740px){
+    .gallery-container .card h2{
+        font-size: 2em;
+    }
+    .gallery-container .card p{
+        font-size: 14px;
+        line-height: 1.5rem;
+        font-size: 900;
+    }
+}
+
+/* MOBILE SCREENS */
+@media (max-width: 550px){
+    header{
+        height: auto;
+    }
+    .header-content-container{
+        width: 100%;
+        padding: 0;
+    }
+    .header-content-container img{
+        width: 100%;
+        position: relative;
+        animation: none;
+    }
+    .header-content{
+        max-width: 100vw;
+        padding-left: 5%;
+        width: 90%;
+        padding-top: 2rem;
+        left: 0%;
+    }
+    .header-content h1{
+        font-size: 3.5em;
+    }
+    .header-content .summaryandlocation p{
+        width: 100%;
+        font-size: 1.4em;
+        line-height: 2.5rem;
+    }
+    .location-btn-container-1{
+        max-width: 60%;
+        width: fit-content;
+    }
+    .location-btn-1{
+        font-size: 1rem;
+    }
+    .gallery-container .card{
+        padding: 10%;
+    }
+    .gallery-container .card h2{
+        font-size: 3.5em;
+    }
+    .gallery-container .card p{
+        font-size: 18px;
+        line-height: 1.8rem;
+        font-size: 900;
+    }
+    .gallery-container{
+        padding: 4rem 5%;
+        grid-gap: 1rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr  1fr 1fr 1fr ; 
+        grid-template-areas: 
+        "one"
+        "two"
+        "three"
+        "three"
+        "four"
+        "five";
+    }
+    footer{
+        display: block;
+        padding: 10% 5%;
+    }
+    .footer{
+        width: 100%;
+    }
+    .footer.logo{
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    .footer.summary{
+        width: 80%;
+        margin-bottom: 5%;
+    }
+    .footer.summary p{
+        font-size: 16px;
+    }
+    .footer.socials{
+        width: 100%;
+    }
+    .footer.socials ul{
+        justify-content: start;
+    }
+}
+@media (max-width: 365px){
+    .header-content h1{
+        font-size: 2.8em;
+        line-height: 2.7rem;
+    }
+    .gallery-container .card h2{
+        font-size: 2.6em;
+    }
+    .location-btn-container-1{
+        max-width: 80%;
+        width: fit-content;
+    }
+    .location-btn-1{
+        font-size: .8rem;
+    }
+}
